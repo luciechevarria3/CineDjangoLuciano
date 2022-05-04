@@ -1,0 +1,18 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<h1>Insertar una pelicula</h1>
+    Formulario para enviar los datos de la pelicula a la vista
+<form method="post"> {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button type="submit">Añadir película</button>
+</form>
+{% if success  %}
+<p><strong>Se ha añadido la película a la lista</strong></p>
+{% endif %}<br />
+{% endblock %}
