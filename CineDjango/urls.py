@@ -5,6 +5,8 @@ from datetime import datetime
 from django.urls import path
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
+from django.conf import settings
+from django.conf.urls.static import static
 from app import forms, views
 
 urlpatterns = [
@@ -30,4 +32,4 @@ urlpatterns = [
     path('voto/', views.voto, name='voto'),
     path('new_pelicula/', views.new_pelicula, name='new_pelicula'),
     path('generos/', views.generos,name='generos'),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -135,7 +135,7 @@ def new_pelicula(request):
             form = PeliculaForm()
         if request.method == "POST":
             success = False
-            form = PeliculaForm(request.POST)
+            form = PeliculaForm(request.POST, request.FILES)
             if form.is_valid(): # La pelicula se añade de forma correcta
                 success = True
                 insertar = form.save(commit = False)
