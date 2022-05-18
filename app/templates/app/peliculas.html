@@ -12,7 +12,12 @@
 		<td>{{ filma.genero }}</td>
 		<td>{{ filma.sinopsis }}</td>
 		<td>{{ filma.votos }}</td>
-		<td><img src="{{ filma.imagen.url }}" width="100px" height="125px"/></td>
+		{% if filma.imagen.url != "" %}
+			<td><img src="{{ filma.imagen.url }}" width="100px" height="125px"/></td>
+		{% endif %}
+		{% if filma.imagen.url == "" %}
+			<td><img src="../Question_mark.svg.png" width="100px" height="125px"/></td>
+		{% endif %}
 	</tr>
 	{% endfor %}
 

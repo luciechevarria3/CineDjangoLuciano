@@ -74,6 +74,7 @@
     <Content Include="app\templates\app\voto.html" />
     <None Include="Properties\PublishProfiles\VamosAlCine20220303123020 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\VamosAlCine20220303123020 - Web Deploy.pubxml" />
+    <Content Include="app\templates\Question_mark.svg.png" />
     <Content Include="requirements.txt" />
     <Content Include="app\static\app\content\bootstrap.css" />
     <Content Include="app\static\app\content\bootstrap.min.css" />
